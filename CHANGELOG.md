@@ -1,0 +1,15 @@
+# 0.0.1
+- add an exception UserAlreadyExistsError
+- Everything about inspecting FastApi app and securing URLs by permissions
+- A password verifier using `django_pbkdf2_sha256` algorithm
+- Inspect api routes in FastApi routes
+- get current user
+- get current user optional
+- force change password in the token
+- add impersonator on user model user and to the token
+- add auth url for api to get token
+- generate a refresh token
+- verify a refresh token
+- add logging handler
+- add CIDEMIA_AUTH_URL as alternative environment variable for auth URL
+- add a security context holder
