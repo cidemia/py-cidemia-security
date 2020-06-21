@@ -1,6 +1,7 @@
 from typing import Optional, List
 
-from cidemiasecurity.holders.request_context_holder import save_object_in_request, read_object_from_request_safe
+from cidemiasecurity.holders.request_context_holder import save_object_in_request, read_object_from_request_safe, \
+    release_request_objects
 from cidemiasecurity.security.models import UserModel
 from cidemiasecurity.security.utils import get_current_user_optional
 
@@ -90,3 +91,7 @@ class SecurityContextHolder:
             return permission in user.permissions
         else:
             return False
+
+    @staticmethod
+    def release_context():
+        release_request_objects()
